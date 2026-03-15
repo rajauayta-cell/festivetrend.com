@@ -50,7 +50,7 @@
         .floral-border::before { left: 25px; }
         .floral-border::after { right: 25px; }
 
-        /* FIXED TIMELINE – exactly like your screenshot */
+        /* PERFECT TIMELINE – exactly like your screenshot */
         .timeline-container {
             position: relative;
             padding-left: 5.5rem;
@@ -91,22 +91,57 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        .timeline-icon::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 4.25rem;
-            height: 4.25rem;
-            border: 3px solid #D4AF37;
-            border-radius: 9999px;
-            z-index: -1;
-        }
+        /* ANIMATED EMOJIS – each reflects the true emotion of the ritual */
+        .timeline-icon.diya      { animation: diya-glow 2.5s infinite ease-in-out; }     /* गणेश पूजन / हल्दी – sacred fire & purification */
+        .timeline-icon.janeu     { animation: janeu-sway 3s infinite ease-in-out; }     /* जनेऊ – sacred thread, new life chapter */
+        .timeline-icon.music     { animation: music-bounce 1.8s infinite ease-in-out; }  /* महिला संगीत – joy & celebration */
+        .timeline-icon.katha     { animation: katha-glow 3s infinite ease-in-out; }     /* सत्यनारायण कथा – divine blessings */
+        .timeline-icon.mehndi    { animation: mehndi-sparkle 2s infinite ease-in-out; } /* मेहंदी – love, beauty & auspiciousness */
+        .timeline-icon.feast     { animation: feast-bounce 2s infinite ease-in-out; }   /* प्रतिभोज – festive feast */
+        .timeline-icon.snan      { animation: snan-wave 2.8s infinite ease-in-out; }    /* मंगल स्नान – purity & freshness */
+        .timeline-icon.baraat    { animation: baraat-gallop 1.5s infinite ease-in-out; } /* बारात – grand procession & excitement */
+        .timeline-icon.vivah     { animation: vivah-spin 4s infinite linear; }          /* विवाह – eternal bond */
+        .timeline-icon.grih      { animation: grih-heart 2.5s infinite ease-in-out; }   /* गृहप्रवेश – new home, love & welcome */
 
-        .timeline-text {
-            flex: 1;
-            padding-top: 0.6rem;
+        @keyframes diya-glow {
+            0%, 100% { transform: scale(1); filter: brightness(1); }
+            50% { transform: scale(1.12); filter: brightness(1.3); }
+        }
+        @keyframes janeu-sway {
+            0%, 100% { transform: rotate(-8deg); }
+            50% { transform: rotate(8deg); }
+        }
+        @keyframes music-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        @keyframes katha-glow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.6); }
+        }
+        @keyframes mehndi-sparkle {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.15) rotate(8deg); }
+        }
+        @keyframes feast-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        @keyframes snan-wave {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+        @keyframes baraat-gallop {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(6px); }
+        }
+        @keyframes vivah-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes grih-heart {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.18); }
         }
 
         .petal {
@@ -136,7 +171,7 @@
 </head>
 <body class="bg-[#F8F1E3] text-[#3F2A1E] overflow-x-hidden">
 
-    <!-- PAGE 1: WELCOME SCREEN – corrected to "अपने सुपुत्र" -->
+    <!-- PAGE 1: WELCOME SCREEN -->
     <div id="welcome-screen" class="min-h-screen hero-bg flex items-center justify-center relative overflow-hidden">
         <div id="petals-container" class="absolute inset-0 pointer-events-none"></div>
         
@@ -194,30 +229,24 @@
     <!-- PAGE 2: MAIN INVITATION -->
     <div id="main-invitation" class="hidden min-h-screen bg-[#F8F1E3]">
         
-        <!-- Sticky Nav -->
         <nav class="sticky top-0 bg-white/95 backdrop-blur-md z-50 border-b border-[#D4AF37]/30">
             <div class="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
-                <button onclick="goBackToWelcome()" 
-                        class="flex items-center gap-3 text-[#9C2A2A] hover:text-[#D4AF37] transition-colors text-xl">
+                <button onclick="goBackToWelcome()" class="flex items-center gap-3 text-[#9C2A2A] hover:text-[#D4AF37] transition-colors text-xl">
                     <i class="fa-solid fa-arrow-left text-3xl"></i>
                     <span class="font-medium">वापस</span>
                 </button>
-                
                 <div class="text-center text-sm tracking-widest">
                     <p class="text-[#D4AF37]">05 मई 2026</p>
                     <p class="text-[#9C2A2A] font-medium">थराली • चमोली • उत्तराखण्ड</p>
                 </div>
-                
                 <div class="text-4xl text-[#9C2A2A]">ॐ</div>
             </div>
         </nav>
 
-        <!-- Hero -->
         <div class="relative h-80 bg-[#9C2A2A] flex items-center justify-center overflow-hidden">
             <div class="garland absolute top-0 left-0 right-0"></div>
             <div class="garland absolute top-0 left-0 right-0 rotate-180"></div>
             <div class="absolute inset-0 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] bg-[length:60px_60px] opacity-10"></div>
-            
             <div class="text-center z-10 px-6">
                 <div class="inline-flex items-center gap-8 bg-white/10 backdrop-blur px-12 py-5 rounded-3xl mb-6">
                     <span class="text-5xl">🪔</span>
@@ -228,10 +257,9 @@
             </div>
         </div>
 
-        <!-- Family Section -->
+        <!-- Family Section (unchanged) -->
         <div class="max-w-5xl mx-auto px-6 py-16">
             <div class="grid md:grid-cols-2 gap-12">
-                <!-- वर पक्ष -->
                 <div class="floral-border bg-white rounded-3xl p-10 card-shadow text-center">
                     <div class="mx-auto mb-8 text-[#9C2A2A] text-6xl">🛕</div>
                     <h3 class="heading-font text-5xl text-[#9C2A2A] mb-10">वर पक्ष</h3>
@@ -245,7 +273,6 @@
                     <p class="heading-font text-6xl text-[#3F2A1E] mt-3">चि० मनीष</p>
                 </div>
 
-                <!-- वधू पक्ष -->
                 <div class="floral-border bg-white rounded-3xl p-10 card-shadow text-center">
                     <div class="mx-auto mb-8 text-[#9C2A2A] text-6xl">🛕</div>
                     <h3 class="heading-font text-5xl text-[#9C2A2A] mb-10">वधू पक्ष</h3>
@@ -260,7 +287,7 @@
             </div>
         </div>
 
-        <!-- TIMELINE – now perfectly aligned like your screenshot -->
+        <!-- MANGALIK KARYAKRAM – ANIMATED EMOJIS -->
         <div class="bg-white py-12">
             <div class="max-w-4xl mx-auto px-6">
                 <div class="text-center mb-12">
@@ -278,42 +305,42 @@
                     
                     <div class="space-y-12">
                         <div class="timeline-item">
-                            <div class="timeline-icon">🪔</div>
+                            <div class="timeline-icon diya">🪔</div>
                             <div class="timeline-text">
                                 <p class="font-medium text-2xl">गणेश पूजन / हल्दी हवन</p>
                                 <p class="text-[#9C2A2A] text-2xl">10.00 बजे प्रातः</p>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-icon">📿</div>
+                            <div class="timeline-icon janeu">📿</div>
                             <div class="timeline-text">
                                 <p class="font-medium text-2xl">जनेऊ संस्कार</p>
                                 <p class="text-[#9C2A2A] text-2xl">11.00 बजे प्रातः</p>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-icon">🎵</div>
+                            <div class="timeline-icon music">🎵</div>
                             <div class="timeline-text">
                                 <p class="font-medium text-2xl">महिला संगीत</p>
                                 <p class="text-[#9C2A2A] text-2xl">02.00 बजे दोपहर</p>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-icon">📖</div>
+                            <div class="timeline-icon katha">📖</div>
                             <div class="timeline-text">
                                 <p class="font-medium text-2xl">श्री सत्यनारायण कथा</p>
                                 <p class="text-[#9C2A2A] text-2xl">07.00 बजे सायं</p>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-icon">🌺</div>
+                            <div class="timeline-icon mehndi">🌺</div>
                             <div class="timeline-text">
                                 <p class="font-medium text-2xl">मेहंदी</p>
                                 <p class="text-[#9C2A2A] text-2xl">08.00 बजे रात्रि</p>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-icon">🍽️</div>
+                            <div class="timeline-icon feast">🍽️</div>
                             <div class="timeline-text">
                                 <p class="font-medium text-2xl">प्रतिभोज</p>
                                 <p class="text-[#9C2A2A] text-2xl">08.30 बजे रात्रि</p>
@@ -322,7 +349,7 @@
                     </div>
                 </div>
 
-                <!-- Day 2 & Day 3 (same structure) -->
+                <!-- Day 2 -->
                 <div class="timeline-container relative mb-16">
                     <div class="timeline-line"></div>
                     <div class="flex items-center gap-5 mb-8">
@@ -331,13 +358,38 @@
                         <div class="text-lg text-[#9C2A2A] z-10">मंगलवार • 22 बैशाख</div>
                     </div>
                     <div class="space-y-12">
-                        <div class="timeline-item"><div class="timeline-icon">🌊</div><div class="timeline-text"><p class="font-medium text-2xl">मंगल स्नान</p><p class="text-[#9C2A2A] text-2xl">08.00 बजे प्रातः</p></div></div>
-                        <div class="timeline-item"><div class="timeline-icon">🐎</div><div class="timeline-text"><p class="font-medium text-2xl">बारात प्रस्थान</p><p class="text-[#9C2A2A] text-2xl">11.00 बजे प्रातः</p></div></div>
-                        <div class="timeline-item"><div class="timeline-icon">💍</div><div class="timeline-text"><p class="font-medium text-2xl">विवाह संस्कार</p><p class="text-[#9C2A2A] text-2xl font-medium">शुभ-लग्नानुसार</p></div></div>
-                        <div class="timeline-item"><div class="timeline-icon">🏠</div><div class="timeline-text"><p class="font-medium text-2xl">वर-वधू गृहप्रवेश</p><p class="text-[#9C2A2A] text-2xl">07.00 बजे सायं</p></div></div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon snan">🌊</div>
+                            <div class="timeline-text">
+                                <p class="font-medium text-2xl">मंगल स्नान</p>
+                                <p class="text-[#9C2A2A] text-2xl">08.00 बजे प्रातः</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon baraat">🐎</div>
+                            <div class="timeline-text">
+                                <p class="font-medium text-2xl">बारात प्रस्थान</p>
+                                <p class="text-[#9C2A2A] text-2xl">11.00 बजे प्रातः</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon vivah">💍</div>
+                            <div class="timeline-text">
+                                <p class="font-medium text-2xl">विवाह संस्कार</p>
+                                <p class="text-[#9C2A2A] text-2xl font-medium">शुभ-लग्नानुसार</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon grih">🏠</div>
+                            <div class="timeline-text">
+                                <p class="font-medium text-2xl">वर-वधू गृहप्रवेश</p>
+                                <p class="text-[#9C2A2A] text-2xl">07.00 बजे सायं</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Day 3 -->
                 <div class="timeline-container relative">
                     <div class="timeline-line"></div>
                     <div class="flex items-center gap-5 mb-8">
@@ -346,7 +398,13 @@
                         <div class="text-lg text-[#9C2A2A] z-10">बुधवार • 23 बैशाख</div>
                     </div>
                     <div class="space-y-12">
-                        <div class="timeline-item"><div class="timeline-icon">🍽️</div><div class="timeline-text"><p class="font-medium text-2xl">प्रतिभोज</p><p class="text-[#9C2A2A] text-2xl">01.00 बजे दोपहर</p></div></div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon feast">🍽️</div>
+                            <div class="timeline-text">
+                                <p class="font-medium text-2xl">प्रतिभोज</p>
+                                <p class="text-[#9C2A2A] text-2xl">01.00 बजे दोपहर</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -356,7 +414,7 @@
             </div>
         </div>
 
-        <!-- Venue, Contact, Blessing (unchanged) -->
+        <!-- Venue, Contact, Blessing (same as before) -->
         <div class="max-w-5xl mx-auto px-6 py-16">
             <div class="bg-white rounded-3xl p-12 card-shadow">
                 <div class="flex flex-col md:flex-row gap-12 items-center">

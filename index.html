@@ -50,7 +50,7 @@
         .floral-border::before { left: 25px; }
         .floral-border::after { right: 25px; }
 
-        /* PERFECT TIMELINE – exactly like your screenshot */
+        /* Timeline with animated emojis */
         .timeline-container {
             position: relative;
             padding-left: 5.5rem;
@@ -91,58 +91,28 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        /* ANIMATED EMOJIS – each reflects the true emotion of the ritual */
-        .timeline-icon.diya      { animation: diya-glow 2.5s infinite ease-in-out; }     /* गणेश पूजन / हल्दी – sacred fire & purification */
-        .timeline-icon.janeu     { animation: janeu-sway 3s infinite ease-in-out; }     /* जनेऊ – sacred thread, new life chapter */
-        .timeline-icon.music     { animation: music-bounce 1.8s infinite ease-in-out; }  /* महिला संगीत – joy & celebration */
-        .timeline-icon.katha     { animation: katha-glow 3s infinite ease-in-out; }     /* सत्यनारायण कथा – divine blessings */
-        .timeline-icon.mehndi    { animation: mehndi-sparkle 2s infinite ease-in-out; } /* मेहंदी – love, beauty & auspiciousness */
-        .timeline-icon.feast     { animation: feast-bounce 2s infinite ease-in-out; }   /* प्रतिभोज – festive feast */
-        .timeline-icon.snan      { animation: snan-wave 2.8s infinite ease-in-out; }    /* मंगल स्नान – purity & freshness */
-        .timeline-icon.baraat    { animation: baraat-gallop 1.5s infinite ease-in-out; } /* बारात – grand procession & excitement */
-        .timeline-icon.vivah     { animation: vivah-spin 4s infinite linear; }          /* विवाह – eternal bond */
-        .timeline-icon.grih      { animation: grih-heart 2.5s infinite ease-in-out; }   /* गृहप्रवेश – new home, love & welcome */
+        /* Animations for each ritual's emotion */
+        .timeline-icon.diya      { animation: diya-glow 2.5s infinite ease-in-out; }
+        .timeline-icon.janeu     { animation: janeu-sway 3s infinite ease-in-out; }
+        .timeline-icon.music     { animation: music-bounce 1.8s infinite ease-in-out; }
+        .timeline-icon.katha     { animation: katha-glow 3s infinite ease-in-out; }
+        .timeline-icon.mehndi    { animation: mehndi-sparkle 2s infinite ease-in-out; }
+        .timeline-icon.feast     { animation: feast-bounce 2s infinite ease-in-out; }
+        .timeline-icon.snan      { animation: snan-wave 2.8s infinite ease-in-out; }
+        .timeline-icon.baraat    { animation: baraat-gallop 1.5s infinite ease-in-out; }
+        .timeline-icon.vivah     { animation: vivah-spin 4s infinite linear; }
+        .timeline-icon.grih      { animation: grih-heart 2.5s infinite ease-in-out; }
 
-        @keyframes diya-glow {
-            0%, 100% { transform: scale(1); filter: brightness(1); }
-            50% { transform: scale(1.12); filter: brightness(1.3); }
-        }
-        @keyframes janeu-sway {
-            0%, 100% { transform: rotate(-8deg); }
-            50% { transform: rotate(8deg); }
-        }
-        @keyframes music-bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-        @keyframes katha-glow {
-            0%, 100% { filter: brightness(1); }
-            50% { filter: brightness(1.6); }
-        }
-        @keyframes mehndi-sparkle {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.15) rotate(8deg); }
-        }
-        @keyframes feast-bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
-        }
-        @keyframes snan-wave {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.08); }
-        }
-        @keyframes baraat-gallop {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(6px); }
-        }
-        @keyframes vivah-spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        @keyframes grih-heart {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.18); }
-        }
+        @keyframes diya-glow     { 0%,100% {transform:scale(1); filter:brightness(1);} 50% {transform:scale(1.12); filter:brightness(1.3);} }
+        @keyframes janeu-sway    { 0%,100% {transform:rotate(-8deg);} 50% {transform:rotate(8deg);} }
+        @keyframes music-bounce  { 0%,100% {transform:translateY(0);} 50% {transform:translateY(-8px);} }
+        @keyframes katha-glow    { 0%,100% {filter:brightness(1);} 50% {filter:brightness(1.6);} }
+        @keyframes mehndi-sparkle{ 0%,100% {transform:scale(1) rotate(0deg);} 50% {transform:scale(1.15) rotate(8deg);} }
+        @keyframes feast-bounce  { 0%,100% {transform:translateY(0);} 50% {transform:translateY(-6px);} }
+        @keyframes snan-wave     { 0%,100% {transform:scale(1);} 50% {transform:scale(1.08);} }
+        @keyframes baraat-gallop { 0%,100% {transform:translateX(0);} 50% {transform:translateX(6px);} }
+        @keyframes vivah-spin    { from {transform:rotate(0deg);} to {transform:rotate(360deg);} }
+        @keyframes grih-heart    { 0%,100% {transform:scale(1);} 50% {transform:scale(1.18);} }
 
         .petal {
             position: absolute;
@@ -257,7 +227,7 @@
             </div>
         </div>
 
-        <!-- Family Section (unchanged) -->
+        <!-- Family Section -->
         <div class="max-w-5xl mx-auto px-6 py-16">
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="floral-border bg-white rounded-3xl p-10 card-shadow text-center">
@@ -287,7 +257,7 @@
             </div>
         </div>
 
-        <!-- MANGALIK KARYAKRAM – ANIMATED EMOJIS -->
+        <!-- MANGALIK KARYAKRAM – corrected to "हल्दी हाथ" -->
         <div class="bg-white py-12">
             <div class="max-w-4xl mx-auto px-6">
                 <div class="text-center mb-12">
@@ -307,7 +277,7 @@
                         <div class="timeline-item">
                             <div class="timeline-icon diya">🪔</div>
                             <div class="timeline-text">
-                                <p class="font-medium text-2xl">गणेश पूजन / हल्दी हवन</p>
+                                <p class="font-medium text-2xl">गणेश पूजन / हल्दी हाथ</p>
                                 <p class="text-[#9C2A2A] text-2xl">10.00 बजे प्रातः</p>
                             </div>
                         </div>
@@ -414,7 +384,7 @@
             </div>
         </div>
 
-        <!-- Venue, Contact, Blessing (same as before) -->
+        <!-- Venue -->
         <div class="max-w-5xl mx-auto px-6 py-16">
             <div class="bg-white rounded-3xl p-12 card-shadow">
                 <div class="flex flex-col md:flex-row gap-12 items-center">
@@ -431,7 +401,9 @@
                             जिला-चमोली, उत्तराखण्ड
                         </p>
                     </div>
-                    <button onclick="openMaps()" class="w-full md:w-auto bg-[#9C2A2A] hover:bg-[#D4AF37] hover:text-[#3F2A1E] text-white px-14 py-10 rounded-3xl flex flex-col items-center transition-all">
+                    
+                    <button onclick="openMaps()" 
+                            class="w-full md:w-auto bg-[#9C2A2A] hover:bg-[#D4AF37] hover:text-[#3F2A1E] text-white px-14 py-10 rounded-3xl flex flex-col items-center transition-all">
                         <i class="fa-solid fa-map-location-dot text-6xl mb-4"></i>
                         <span class="font-medium text-3xl">लोकेशन देखें</span>
                     </button>
@@ -439,11 +411,14 @@
             </div>
         </div>
 
+        <!-- Contact & Blessing -->
         <div class="bg-[#9C2A2A] py-16 text-white text-center">
             <div class="max-w-5xl mx-auto px-6">
                 <a href="tel:9997504580" class="inline-flex items-center gap-8 bg-white/10 backdrop-blur rounded-3xl px-16 py-10 hover:bg-white/20 transition-all">
                     <i class="fa-solid fa-phone text-5xl"></i>
-                    <div><p class="text-5xl font-medium">99975 04580</p></div>
+                    <div>
+                        <p class="text-5xl font-medium">99975 04580</p>
+                    </div>
                 </a>
                 <p class="mt-12 text-2xl">श्रीमती मंजू रावत • श्री सुरेन्द्र सिंह रावत</p>
             </div>
